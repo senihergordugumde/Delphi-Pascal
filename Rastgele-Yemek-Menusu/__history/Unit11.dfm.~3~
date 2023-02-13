@@ -1,0 +1,76 @@
+object Form11: TForm11
+  Left = 0
+  Top = 0
+  Caption = 'Form11'
+  ClientHeight = 441
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -40
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OnCreate = FormCreate
+  TextHeight = 54
+  object Label1: TLabel
+    Left = 171
+    Top = 40
+    Width = 273
+    Height = 54
+    Caption = 'G'#252'n'#252'n Men'#252's'#252
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -40
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 171
+    Top = 176
+    Width = 60
+    Height = 30
+    Caption = 'Label2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 290
+    Top = 176
+    Width = 60
+    Height = 30
+    Caption = 'Label2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 413
+    Top = 176
+    Width = 60
+    Height = 30
+    Caption = 'Label2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 218
+    Top = 276
+    Width = 187
+    Height = 97
+    Caption = 'SE'#199
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+end

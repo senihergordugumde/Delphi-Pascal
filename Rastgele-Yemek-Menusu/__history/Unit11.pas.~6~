@@ -1,0 +1,56 @@
+unit Unit11;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm11 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form11: TForm11;
+
+implementation
+
+{$R *.dfm}
+
+var
+ana_yemek : Array [0..4] Of String;
+corba : Array [0..4] Of String;
+tatli : Array [0..4] Of String;
+
+procedure TForm11.Button1Click(Sender: TObject);
+var
+x,y,z : integer;
+begin
+x := Random(4);
+y := Random(4);
+z := Random(4);
+label2.Caption := ana_yemek[x];
+label3.Caption := corba[y];
+label4.Caption := tatli[z];
+end;
+
+procedure TForm11.FormCreate(Sender: TObject);
+begin
+ana_yemek[0] := 'Mercimek';
+ana_yemek [1] := 'Ezogelin';
+ana_yemek[2] := 'Kelle Paça';
+ana_yemek[3] := 'Yayla';
+end;
+
+end.
