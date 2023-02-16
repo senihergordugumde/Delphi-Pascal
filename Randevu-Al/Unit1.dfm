@@ -41,7 +41,6 @@ object Form1: TForm1
     Width = 145
     Height = 23
     DataField = 'ilce'
-    DataSource = DataSource2
     TabOrder = 1
   end
   object Button1: TButton
@@ -53,32 +52,28 @@ object Form1: TForm1
     TabOrder = 2
     OnClick = Button1Click
   end
-  object DBGrid1: TDBGrid
-    Left = 56
-    Top = 232
-    Width = 320
-    Height = 120
-    DataSource = DataSource2
+  object DBComboBox3: TDBComboBox
+    Left = 160
+    Top = 248
+    Width = 145
+    Height = 23
+    DataField = 'ilce'
+    DataSource = DataSource3
     TabOrder = 3
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
   end
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Us' +
-      'ers\Emir Pasa\Documents\Database2.mdb;Mode=Share Deny None;Persi' +
-      'st Security Info=False;Jet OLEDB:System database="";Jet OLEDB:Re' +
-      'gistry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine T' +
-      'ype=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial' +
-      ' Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New D' +
-      'atabase Password="";Jet OLEDB:Create System Database=False;Jet O' +
-      'LEDB:Encrypt Database=False;Jet OLEDB:Don'#39't Copy Locale on Compa' +
-      'ct=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLED' +
-      'B:SFP=False'
+      'ers\Emir Pasa\Documents\GitHub\Delphi-Pascal\Randevu-Al\Win32\De' +
+      'bug\iller.mdb;Mode=Share Deny None;Persist Security Info=False;J' +
+      'et OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB' +
+      ':Database Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database' +
+      ' Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Gl' +
+      'obal Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet ' +
+      'OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=Fa' +
+      'lse;Jet OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compa' +
+      'ct Without Replica Repair=False;Jet OLEDB:SFP=False'
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 536
@@ -88,7 +83,7 @@ object Form1: TForm1
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'sehirler'
+    TableName = 'iller'
     Left = 480
     Top = 200
   end
@@ -97,20 +92,27 @@ object Form1: TForm1
     Left = 568
     Top = 272
   end
-  object ADOTable2: TADOTable
+  object ADOQuery1: TADOQuery
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    DataSource = DataSource3
+    Parameters = <>
+    SQL.Strings = (
+      'select coalesce(kolon, 0) from iller')
+    Left = 360
+    Top = 136
+  end
+  object DataSource3: TDataSource
+    DataSet = ADOTable3
+    Left = 304
+    Top = 352
+  end
+  object ADOTable3: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    IndexFieldNames = 'plaka'
-    MasterFields = 'plaka'
-    MasterSource = DataSource1
     TableName = 'ilceler'
-    Left = 496
-    Top = 336
-  end
-  object DataSource2: TDataSource
-    DataSet = ADOTable2
-    Left = 400
-    Top = 392
+    Left = 392
+    Top = 256
   end
 end

@@ -16,10 +16,11 @@ type
     DataSource1: TDataSource;
     DBComboBox2: TDBComboBox;
     Label2: TLabel;
-    ADOTable2: TADOTable;
-    DataSource2: TDataSource;
     Button1: TButton;
-    DBGrid1: TDBGrid;
+    ADOQuery1: TADOQuery;
+    DBComboBox3: TDBComboBox;
+    DataSource3: TDataSource;
+    ADOTable3: TADOTable;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
   private
@@ -37,13 +38,23 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  dbcombobox2.Clear;
-  adotable2.First;
 
-repeat
-  dbcombobox2.Items.Add(adotable2.FieldByName('ilce').AsString);
-  adotable2.Next;
-until (adotable2.EOF) ;
+
+
+  ADOQuery1.SQL.Clear();
+  ADOQuery1.SQL.Add('SELECT * FROM ilceler');
+  ADOQuery1.SQL.Add('WHERE sehir_adi = sehirim');
+  ADOQuery1.Parameters.ParamByName('sehirim').Value := dbcombobox1.text;
+  ADOQuery1.Open;
+  repeat
+  dbcombobox3.Items.Add(adoquery1['ilce']);
+  adoquery1.Next;
+  until (adoquery1.EOF) ;
+
+  dbcombobox2.Clear;
+
+
+
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
