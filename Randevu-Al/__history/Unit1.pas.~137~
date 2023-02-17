@@ -43,7 +43,7 @@ implementation
 procedure TForm1.DBComboBox1Change(Sender: TObject);
 begin
  dbcombobox3.Clear;
-
+   dbcombobox2.Clear;
   ADOQuery1.SQL.Clear();
   ADOQuery1.SQL.Add('SELECT * FROM ilceler');
   ADOQuery1.SQL.Add('WHERE sehir_adi = sehirim');
@@ -59,8 +59,8 @@ procedure TForm1.DBComboBox3Change(Sender: TObject);
 begin
   dbcombobox2.Clear;
   ADOQuery2.SQL.Clear();
-  ADOQuery2.SQL.Add('SELCET * FROM hastaneler');
-  ADOQuery2.SQL.Add('WHERE ilce_adi = ilce_a');
+  ADOQuery2.SQL.Text := 'Select * FROM hastaneler WHERE ilce_adi= :ilce_a';
+
   ADOQuery2.Parameters.ParamByName('ilce_a').Value := dbcombobox3.Text;
   ADOQuery2.Open;
 
@@ -73,7 +73,9 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 
 begin
-
+ dbcombobox3.Clear;
+   dbcombobox2.Clear;
+    dbcombobox1.Clear;;
 adotable1.First;
 
 repeat

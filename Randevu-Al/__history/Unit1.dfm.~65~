@@ -51,6 +51,7 @@ object Form1: TForm1
     DataField = 'ilce'
     DataSource = DataSource3
     TabOrder = 1
+    OnChange = DBComboBox3Change
   end
   object DBComboBox2: TDBComboBox
     Left = 224
@@ -60,7 +61,6 @@ object Form1: TForm1
     DataField = 'hastane'
     DataSource = DataSource2
     TabOrder = 2
-    OnChange = DBComboBox2Change
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -125,18 +125,18 @@ object Form1: TForm1
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'hastane'
+    TableName = 'hastaneler'
     Left = 248
     Top = 304
   end
   object ADOQuery2: TADOQuery
     Connection = ADOConnection1
-    CursorType = ctStatic
     DataSource = DataSource2
     Parameters = <>
     SQL.Strings = (
-      'select coalesce(kolon, 0) from iller')
-    Left = 440
-    Top = 120
+      'select coalesce(kolon, 0) from iller'
+      '')
+    Left = 320
+    Top = 280
   end
 end

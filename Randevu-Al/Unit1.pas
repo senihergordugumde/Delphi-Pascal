@@ -24,6 +24,8 @@ type
     DataSource2: TDataSource;
     ADOTable2: TADOTable;
     ADOQuery2: TADOQuery;
+    ComboBox1: TComboBox;
+    Label4: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure DBComboBox1Change(Sender: TObject);
     procedure DBComboBox3Change(Sender: TObject);

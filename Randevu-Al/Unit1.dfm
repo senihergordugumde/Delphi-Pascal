@@ -33,6 +33,13 @@ object Form1: TForm1
     Height = 15
     Caption = 'Hastane'
   end
+  object Label4: TLabel
+    Left = 224
+    Top = 299
+    Width = 35
+    Height = 15
+    Caption = 'B'#246'l'#252'm'
+  end
   object DBComboBox1: TDBComboBox
     Left = 224
     Top = 85
@@ -62,6 +69,35 @@ object Form1: TForm1
     DataSource = DataSource2
     TabOrder = 2
   end
+  object ComboBox1: TComboBox
+    Left = 224
+    Top = 320
+    Width = 145
+    Height = 23
+    TabOrder = 3
+    Text = 'ComboBox1'
+    Items.Strings = (
+      'Acil Servis'
+      'Anestezi ve Reanimasyon'
+      'A'#287#305'z ve Di'#351' Sa'#287'l'#305#287#305
+      'Acil Servis'
+      'Anestezi ve Reanimasyon'
+      'A'#287#305'z ve Di'#351' Sa'#287'l'#305#287#305
+      'Beslenme ve Diyet'
+      'Beyin, Sinir ve Omurilik Cerrahisi ( N'#246'ro'#351'irurji )'
+      'Biyokimya Laboratuvar'#305
+      'Check Up Merkezi'
+      #199'ocuk Cerrahisi'
+      #199'ocuk Endokrinolojisi'
+      #199'ocuk Sa'#287'l'#305#287#305' ve Hastal'#305'klar'#305
+      'Dahiliye'
+      'Dermatoloji'
+      'El Cerrahisi ve Mikro Cerrahi'
+      'Endokrinoloji ve Metabolizma Hastal'#305'klar'#305
+      'Enfeksiyon Hastal'#305'klar'#305' ve Klinik Mikrobiyoloji'
+      'Estetik, Plastik ve Rekonstr'#252'ktif Cerrahi'
+      'Fizik Tedavi ve Rehabilitasyon')
+  end
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
@@ -77,21 +113,21 @@ object Form1: TForm1
       'ct Without Replica Repair=False;Jet OLEDB:SFP=False'
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
-    Left = 456
-    Top = 376
+    Left = 512
+    Top = 360
   end
   object ADOTable1: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'iller'
-    Left = 480
-    Top = 200
+    Left = 536
+    Top = 184
   end
   object DataSource1: TDataSource
     DataSet = ADOTable1
-    Left = 472
-    Top = 280
+    Left = 528
+    Top = 264
   end
   object ADOQuery1: TADOQuery
     Connection = ADOConnection1
@@ -100,34 +136,34 @@ object Form1: TForm1
     Parameters = <>
     SQL.Strings = (
       'select coalesce(kolon, 0) from iller')
-    Left = 112
-    Top = 248
+    Left = 40
+    Top = 240
   end
   object DataSource3: TDataSource
     DataSet = ADOTable3
-    Left = 112
-    Top = 376
+    Left = 40
+    Top = 368
   end
   object ADOTable3: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'ilceler'
-    Left = 112
-    Top = 312
+    Left = 40
+    Top = 304
   end
   object DataSource2: TDataSource
     DataSet = ADOTable2
-    Left = 256
-    Top = 368
+    Left = 32
+    Top = 152
   end
   object ADOTable2: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'hastaneler'
-    Left = 248
-    Top = 304
+    Left = 24
+    Top = 88
   end
   object ADOQuery2: TADOQuery
     Connection = ADOConnection1
@@ -136,7 +172,7 @@ object Form1: TForm1
     SQL.Strings = (
       'select coalesce(kolon, 0) from iller'
       '')
-    Left = 320
-    Top = 280
+    Left = 552
+    Top = 128
   end
 end
