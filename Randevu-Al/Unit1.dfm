@@ -13,44 +13,53 @@ object Form1: TForm1
   OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
-    Left = 56
-    Top = 32
+    Left = 224
+    Top = 64
     Width = 6
     Height = 15
     Caption = #304'l'
   end
   object Label2: TLabel
-    Left = 56
-    Top = 99
+    Left = 224
+    Top = 131
     Width = 18
     Height = 15
     Caption = #304'l'#231'e'
   end
+  object Label3: TLabel
+    Left = 224
+    Top = 227
+    Width = 43
+    Height = 15
+    Caption = 'Hastane'
+  end
   object DBComboBox1: TDBComboBox
-    Left = 56
-    Top = 53
+    Left = 224
+    Top = 85
     Width = 145
     Height = 23
     DataField = 'sehir'
     DataSource = DataSource1
     TabOrder = 0
-  end
-  object Button1: TButton
-    Left = 248
-    Top = 48
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 1
-    OnClick = Button1Click
+    OnChange = DBComboBox1Change
   end
   object DBComboBox3: TDBComboBox
-    Left = 56
-    Top = 136
+    Left = 224
+    Top = 168
     Width = 145
     Height = 23
     DataField = 'ilce'
     DataSource = DataSource3
+    TabOrder = 1
+    OnChange = DBComboBox3Change
+  end
+  object DBComboBox2: TDBComboBox
+    Left = 224
+    Top = 248
+    Width = 145
+    Height = 23
+    DataField = 'hastane'
+    DataSource = DataSource2
     TabOrder = 2
   end
   object ADOConnection1: TADOConnection
@@ -68,8 +77,8 @@ object Form1: TForm1
       'ct Without Replica Repair=False;Jet OLEDB:SFP=False'
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
-    Left = 536
-    Top = 384
+    Left = 456
+    Top = 376
   end
   object ADOTable1: TADOTable
     Active = True
@@ -81,8 +90,8 @@ object Form1: TForm1
   end
   object DataSource1: TDataSource
     DataSet = ADOTable1
-    Left = 568
-    Top = 272
+    Left = 472
+    Top = 280
   end
   object ADOQuery1: TADOQuery
     Connection = ADOConnection1
@@ -91,20 +100,43 @@ object Form1: TForm1
     Parameters = <>
     SQL.Strings = (
       'select coalesce(kolon, 0) from iller')
-    Left = 360
-    Top = 136
+    Left = 112
+    Top = 248
   end
   object DataSource3: TDataSource
     DataSet = ADOTable3
-    Left = 304
-    Top = 352
+    Left = 112
+    Top = 376
   end
   object ADOTable3: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'ilceler'
-    Left = 392
-    Top = 256
+    Left = 112
+    Top = 312
+  end
+  object DataSource2: TDataSource
+    DataSet = ADOTable2
+    Left = 256
+    Top = 368
+  end
+  object ADOTable2: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'hastaneler'
+    Left = 248
+    Top = 304
+  end
+  object ADOQuery2: TADOQuery
+    Connection = ADOConnection1
+    DataSource = DataSource2
+    Parameters = <>
+    SQL.Strings = (
+      'select coalesce(kolon, 0) from iller'
+      '')
+    Left = 320
+    Top = 280
   end
 end
