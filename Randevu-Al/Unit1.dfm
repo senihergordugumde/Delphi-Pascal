@@ -1,48 +1,49 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
+  Left = 551
+  Top = 291
   Caption = 'Form1'
-  ClientHeight = 441
-  ClientWidth = 624
+  ClientHeight = 547
+  ClientWidth = 409
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesigned
   OnCreate = FormCreate
   TextHeight = 15
   object Label1: TLabel
-    Left = 224
-    Top = 64
+    Left = 136
+    Top = 24
     Width = 6
     Height = 15
     Caption = #304'l'
   end
   object Label2: TLabel
-    Left = 224
-    Top = 131
+    Left = 136
+    Top = 107
     Width = 18
     Height = 15
     Caption = #304'l'#231'e'
   end
   object Label3: TLabel
-    Left = 224
-    Top = 227
+    Left = 136
+    Top = 187
     Width = 43
     Height = 15
     Caption = 'Hastane'
   end
   object Label4: TLabel
-    Left = 224
-    Top = 299
+    Left = 136
+    Top = 259
     Width = 35
     Height = 15
     Caption = 'B'#246'l'#252'm'
   end
   object DBComboBox1: TDBComboBox
-    Left = 224
-    Top = 85
+    Left = 136
+    Top = 45
     Width = 145
     Height = 23
     DataField = 'sehir'
@@ -51,8 +52,8 @@ object Form1: TForm1
     OnChange = DBComboBox1Change
   end
   object DBComboBox3: TDBComboBox
-    Left = 224
-    Top = 168
+    Left = 136
+    Top = 128
     Width = 145
     Height = 23
     DataField = 'ilce'
@@ -61,8 +62,8 @@ object Form1: TForm1
     OnChange = DBComboBox3Change
   end
   object DBComboBox2: TDBComboBox
-    Left = 224
-    Top = 248
+    Left = 136
+    Top = 208
     Width = 145
     Height = 23
     DataField = 'hastane'
@@ -70,12 +71,12 @@ object Form1: TForm1
     TabOrder = 2
   end
   object ComboBox1: TComboBox
-    Left = 224
-    Top = 320
+    Left = 136
+    Top = 280
     Width = 145
     Height = 23
     TabOrder = 3
-    Text = 'ComboBox1'
+    Text = ' '
     Items.Strings = (
       'Acil Servis'
       'Anestezi ve Reanimasyon'
@@ -98,6 +99,23 @@ object Form1: TForm1
       'Estetik, Plastik ve Rekonstr'#252'ktif Cerrahi'
       'Fizik Tedavi ve Rehabilitasyon')
   end
+  object Button1: TButton
+    Left = 41
+    Top = 351
+    Width = 89
+    Height = 27
+    Caption = 'Tarih / Saat '
+    TabOrder = 4
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 136
+    Top = 353
+    Width = 145
+    Height = 23
+    Enabled = False
+    TabOrder = 5
+  end
   object ADOConnection1: TADOConnection
     Connected = True
     ConnectionString = 
@@ -113,21 +131,21 @@ object Form1: TForm1
       'ct Without Replica Repair=False;Jet OLEDB:SFP=False'
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
-    Left = 512
-    Top = 360
+    Left = 592
+    Top = 272
   end
   object ADOTable1: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'iller'
-    Left = 536
-    Top = 184
+    Left = 592
+    Top = 144
   end
   object DataSource1: TDataSource
     DataSet = ADOTable1
-    Left = 528
-    Top = 264
+    Left = 592
+    Top = 208
   end
   object ADOQuery1: TADOQuery
     Connection = ADOConnection1
@@ -136,34 +154,34 @@ object Form1: TForm1
     Parameters = <>
     SQL.Strings = (
       'select coalesce(kolon, 0) from iller')
-    Left = 40
-    Top = 240
+    Left = 464
+    Top = 184
   end
   object DataSource3: TDataSource
     DataSet = ADOTable3
-    Left = 40
-    Top = 368
+    Left = 456
+    Top = 312
   end
   object ADOTable3: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'ilceler'
-    Left = 40
-    Top = 304
+    Left = 464
+    Top = 248
   end
   object DataSource2: TDataSource
     DataSet = ADOTable2
-    Left = 32
-    Top = 152
+    Left = 464
+    Top = 128
   end
   object ADOTable2: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'hastaneler'
-    Left = 24
-    Top = 88
+    Left = 464
+    Top = 80
   end
   object ADOQuery2: TADOQuery
     Connection = ADOConnection1
@@ -172,7 +190,7 @@ object Form1: TForm1
     SQL.Strings = (
       'select coalesce(kolon, 0) from iller'
       '')
-    Left = 552
-    Top = 128
+    Left = 592
+    Top = 88
   end
 end

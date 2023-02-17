@@ -26,9 +26,12 @@ type
     ADOQuery2: TADOQuery;
     ComboBox1: TComboBox;
     Label4: TLabel;
+    Button1: TButton;
+    Edit1: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure DBComboBox1Change(Sender: TObject);
     procedure DBComboBox3Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,8 +42,13 @@ var
   Form1: TForm1;
 
 implementation
-
+  uses unit4;
 {$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+form4.show;
+end;
 
 procedure TForm1.DBComboBox1Change(Sender: TObject);
 begin
