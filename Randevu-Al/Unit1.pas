@@ -14,7 +14,6 @@ type
     ADOConnection1: TADOConnection;
     ADOTable1: TADOTable;
     DataSource1: TDataSource;
-    DBComboBox2: TDBComboBox;
     Label2: TLabel;
     Button1: TButton;
     ADOQuery1: TADOQuery;
@@ -39,7 +38,7 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 
-
+  dbcombobox3.Clear;
 
   ADOQuery1.SQL.Clear();
   ADOQuery1.SQL.Add('SELECT * FROM ilceler');
@@ -51,7 +50,7 @@ begin
   adoquery1.Next;
   until (adoquery1.EOF) ;
 
-  dbcombobox2.Clear;
+
 
 
 
@@ -60,7 +59,7 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 
 begin
-dbcombobox2.Clear;
+
 adotable1.First;
 
 repeat

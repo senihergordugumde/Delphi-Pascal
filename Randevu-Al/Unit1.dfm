@@ -35,31 +35,23 @@ object Form1: TForm1
     DataSource = DataSource1
     TabOrder = 0
   end
-  object DBComboBox2: TDBComboBox
-    Left = 56
-    Top = 120
-    Width = 145
-    Height = 23
-    DataField = 'ilce'
-    TabOrder = 1
-  end
   object Button1: TButton
     Left = 248
     Top = 48
     Width = 75
     Height = 25
     Caption = 'Button1'
-    TabOrder = 2
+    TabOrder = 1
     OnClick = Button1Click
   end
   object DBComboBox3: TDBComboBox
-    Left = 160
-    Top = 248
+    Left = 56
+    Top = 136
     Width = 145
     Height = 23
     DataField = 'ilce'
     DataSource = DataSource3
-    TabOrder = 3
+    TabOrder = 2
   end
   object ADOConnection1: TADOConnection
     Connected = True

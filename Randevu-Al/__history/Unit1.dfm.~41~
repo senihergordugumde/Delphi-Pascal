@@ -41,7 +41,6 @@ object Form1: TForm1
     Width = 145
     Height = 23
     DataField = 'ilce'
-    DataSource = DataSource2
     TabOrder = 1
   end
   object Button1: TButton
@@ -53,27 +52,14 @@ object Form1: TForm1
     TabOrder = 2
     OnClick = Button1Click
   end
-  object DBGrid1: TDBGrid
-    Left = 56
-    Top = 232
-    Width = 320
-    Height = 120
-    DataSource = DataSource2
-    TabOrder = 3
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
-  end
   object DBComboBox3: TDBComboBox
-    Left = 112
-    Top = 176
+    Left = 160
+    Top = 248
     Width = 145
     Height = 23
-    DataField = 'sehir'
-    DataSource = DataSource1
-    TabOrder = 4
+    DataField = 'ilce'
+    DataSource = DataSource3
+    TabOrder = 3
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -106,27 +92,27 @@ object Form1: TForm1
     Left = 568
     Top = 272
   end
-  object ADOTable2: TADOTable
-    Connection = ADOConnection1
-    CursorType = ctStatic
-    IndexFieldNames = 'plaka'
-    TableName = 'ilceler'
-    Left = 496
-    Top = 336
-  end
-  object DataSource2: TDataSource
-    DataSet = ADOTable2
-    Left = 400
-    Top = 392
-  end
   object ADOQuery1: TADOQuery
     Connection = ADOConnection1
     CursorType = ctStatic
-    DataSource = DataSource1
+    DataSource = DataSource3
     Parameters = <>
     SQL.Strings = (
-      'SELECT * FROM iller where id = '#39'55'#39)
+      'select coalesce(kolon, 0) from iller')
     Left = 360
     Top = 136
+  end
+  object DataSource3: TDataSource
+    DataSet = ADOTable3
+    Left = 304
+    Top = 352
+  end
+  object ADOTable3: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'ilceler'
+    Left = 392
+    Top = 256
   end
 end

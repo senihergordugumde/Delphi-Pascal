@@ -39,18 +39,18 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 
-  with adoquery1 do
+  dbcombobox3.Clear;
 
-  begin
-    Close;
-    SQL.Clear;
-    Sql.Text := 'select * from ilceler where sehir_adi="dbcombobox1.text" ';
-    open;
-    repeat
-    dbcombobox3.Items.Add(adoquery1['ilce']);
-    adoquery1.Next;
-    until (adoquery1.EOF) ;
-  end;
+  ADOQuery1.SQL.Clear();
+  ADOQuery1.SQL.Add('SELECT * FROM ilceler');
+  ADOQuery1.SQL.Add('WHERE sehir_adi = sehirim');
+  ADOQuery1.Parameters.ParamByName('sehirim').Value := dbcombobox1.text;
+  ADOQuery1.Open;
+  repeat
+  dbcombobox3.Items.Add(adoquery1['ilce']);
+  adoquery1.Next;
+  until (adoquery1.EOF) ;
+
   dbcombobox2.Clear;
 
 
