@@ -1,5 +1,5 @@
 object Form1: TForm1
-  Left = 551
+  Left = 797
   Top = 291
   Caption = 'Form1'
   ClientHeight = 547
@@ -135,8 +135,18 @@ object Form1: TForm1
     Top = 353
     Width = 66
     Height = 23
+    Enabled = False
     ReadOnly = True
     TabOrder = 6
+  end
+  object Button2: TButton
+    Left = 146
+    Top = 416
+    Width = 119
+    Height = 25
+    Caption = 'Randevu Olu'#351'tur'
+    TabOrder = 7
+    OnClick = Button2Click
   end
   object ADOConnection1: TADOConnection
     Connected = True

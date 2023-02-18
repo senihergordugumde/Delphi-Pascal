@@ -24,10 +24,10 @@ var
 implementation
 
 {$R *.dfm}
-uses unit3, unit1;
+uses unit3, unit1, unit5;
 procedure TForm2.Button1Click(Sender: TObject);
 begin
-form1.Show;
+form5.Show;
 end;
 
 procedure TForm2.Button2Click(Sender: TObject);

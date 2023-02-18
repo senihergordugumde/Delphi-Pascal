@@ -1,4 +1,4 @@
-unit Unit1;
+﻿unit Unit1;
 
 interface
 
@@ -31,10 +31,12 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Edit2: TEdit;
+    Button2: TButton;
     procedure FormCreate(Sender: TObject);
     procedure DBComboBox1Change(Sender: TObject);
     procedure DBComboBox3Change(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +55,11 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 form4.show;
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  showmessage('Randevunuz Başarıyla Oluşturuldu!');
 end;
 
 procedure TForm1.DBComboBox1Change(Sender: TObject);
