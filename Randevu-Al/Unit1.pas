@@ -28,6 +28,9 @@ type
     Label4: TLabel;
     Button1: TButton;
     Edit1: TEdit;
+    Label5: TLabel;
+    Label6: TLabel;
+    Edit2: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure DBComboBox1Change(Sender: TObject);
     procedure DBComboBox3Change(Sender: TObject);
@@ -40,9 +43,11 @@ type
 
 var
   Form1: TForm1;
-
+tarihsaat : string;
 implementation
   uses unit4;
+
+
 {$R *.dfm}
 
 procedure TForm1.Button1Click(Sender: TObject);

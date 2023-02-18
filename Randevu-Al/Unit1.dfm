@@ -41,6 +41,20 @@ object Form1: TForm1
     Height = 15
     Caption = 'B'#246'l'#252'm'
   end
+  object Label5: TLabel
+    Left = 136
+    Top = 332
+    Width = 25
+    Height = 15
+    Caption = 'Tarih'
+  end
+  object Label6: TLabel
+    Left = 215
+    Top = 332
+    Width = 22
+    Height = 15
+    Caption = 'Saat'
+  end
   object DBComboBox1: TDBComboBox
     Left = 136
     Top = 45
@@ -100,7 +114,7 @@ object Form1: TForm1
       'Fizik Tedavi ve Rehabilitasyon')
   end
   object Button1: TButton
-    Left = 41
+    Left = 33
     Top = 351
     Width = 89
     Height = 27
@@ -111,10 +125,18 @@ object Form1: TForm1
   object Edit1: TEdit
     Left = 136
     Top = 353
-    Width = 145
+    Width = 73
     Height = 23
     Enabled = False
     TabOrder = 5
+  end
+  object Edit2: TEdit
+    Left = 215
+    Top = 353
+    Width = 66
+    Height = 23
+    ReadOnly = True
+    TabOrder = 6
   end
   object ADOConnection1: TADOConnection
     Connected = True

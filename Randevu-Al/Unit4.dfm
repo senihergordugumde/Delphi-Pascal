@@ -119,10 +119,11 @@ object Form4: TForm4
   end
   object Button1: TButton
     Left = 131
-    Top = 280
+    Top = 289
     Width = 75
     Height = 25
-    Caption = 'Olu'#351'tur'
+    Caption = 'Kapat'
     TabOrder = 1
+    OnClick = Button1Click
   end
 end

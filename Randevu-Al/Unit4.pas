@@ -34,6 +34,7 @@ type
     procedure SpeedButton10Click(Sender: TObject);
     procedure SpeedButton11Click(Sender: TObject);
     procedure SpeedButton12Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,105 +44,112 @@ type
 var
   Form4: TForm4;
 
+
 implementation
+uses unit1;
  var
  x,y : string;
+
+
 {$R *.dfm}
+
+procedure TForm4.Button1Click(Sender: TObject);
+begin
+  form4.Close;
+end;
 
 procedure TForm4.SpeedButton10Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton10.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton10.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton10.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton11Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton11.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton11.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton11.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton12Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton12.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton12.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton12.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton1Click(Sender: TObject);
 begin
-
-x := DateToStr(datetimepicker1.date);
-y := speedbutton1.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton1.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton1.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton2Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton2.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton2.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton2.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton3Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton3.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton3.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton3.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton4Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton4.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton4.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton4.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton5Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton5.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton5.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton5.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton6Click(Sender: TObject);
 begin
-
-x := DateToStr(datetimepicker1.date);
-y := speedbutton6.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton6.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton6.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton7Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton7.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton7.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton7.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton8Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton8.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton8.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton8.Caption +  '  Seçildi');
 end;
 
 procedure TForm4.SpeedButton9Click(Sender: TObject);
 begin
 
-x := DateToStr(datetimepicker1.date);
-y := speedbutton9.Caption;
-ShowMessage('Saat:  ' + y +  '  Seçildi');
+ form1.Edit1.text := DateToStr(datetimepicker1.date);
+ form1.Edit2.text:= speedbutton9.Caption;
+ShowMessage(  DateToStr(datetimepicker1.date) +'   Saat:  ' +  speedbutton9.Caption +  '  Seçildi');
 end;
 
 end.
