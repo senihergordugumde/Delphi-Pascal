@@ -37,7 +37,6 @@ object Form3: TForm3
     Height = 23
     Alignment = taCenter
     TabOrder = 0
-    Text = 'Edit1'
   end
   object Edit2: TEdit
     Left = 48
@@ -47,7 +46,6 @@ object Form3: TForm3
     Alignment = taCenter
     PasswordChar = #1
     TabOrder = 1
-    Text = 'Edit1'
   end
   object Button1: TButton
     Left = 104

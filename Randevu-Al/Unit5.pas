@@ -1,4 +1,4 @@
-unit Unit5;
+﻿unit Unit5;
 
 interface
 
@@ -31,8 +31,18 @@ implementation
 
 procedure TForm5.Button1Click(Sender: TObject);
 begin
-form1.Show;
-form5.Close;
+
+if (edit1.GetTextLen > 0) and (edit2.GetTextLen > 0) and (edit3.GetTextLen > 0) then
+  begin
+   form1.Show;
+   form5.Close;
+  end
+
+else
+ begin
+   ShowMessage('Hasta Bilgilerini Eksik Bırakamyınız!')
+ end;
+
 end;
 
 end.
