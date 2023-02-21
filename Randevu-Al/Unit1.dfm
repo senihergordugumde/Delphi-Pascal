@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 269
   Caption = 'Form1'
   ClientHeight = 547
-  ClientWidth = 395
+  ClientWidth = 373
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -152,22 +152,21 @@ object Form1: TForm1
     Connected = True
     ConnectionString = 
       'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Us' +
-      'ers\Ege\Documents\GitHub\Delphi-Pascal\Randevu-Al\Win32\Debug\il' +
-      'ler.mdb;Mode=Share Deny None;Persist Security Info=False;Jet OLE' +
-      'DB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Datab' +
-      'ase Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locki' +
-      'ng Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global B' +
-      'ulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:' +
-      'Create System Database=False;Jet OLEDB:Encrypt Database=False;Je' +
-      't OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compact Wit' +
-      'hout Replica Repair=False;Jet OLEDB:SFP=False'
+      'ers\Emir Pasa\Documents\GitHub\Delphi-Pascal\Randevu-Al\Win32\De' +
+      'bug\iller.mdb;Mode=Share Deny None;Persist Security Info=False;J' +
+      'et OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB' +
+      ':Database Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database' +
+      ' Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Gl' +
+      'obal Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet ' +
+      'OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=Fa' +
+      'lse;Jet OLEDB:Don'#39't Copy Locale on Compact=False;Jet OLEDB:Compa' +
+      'ct Without Replica Repair=False;Jet OLEDB:SFP=False'
     Mode = cmShareDenyNone
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 592
     Top = 272
   end
   object ADOTable1: TADOTable
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'iller'
@@ -195,7 +194,6 @@ object Form1: TForm1
     Top = 312
   end
   object ADOTable3: TADOTable
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'ilceler'
@@ -208,7 +206,6 @@ object Form1: TForm1
     Top = 128
   end
   object ADOTable2: TADOTable
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'hastaneler'

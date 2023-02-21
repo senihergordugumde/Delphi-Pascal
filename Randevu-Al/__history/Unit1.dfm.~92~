@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 291
   Caption = 'Form1'
   ClientHeight = 547
-  ClientWidth = 395
+  ClientWidth = 409
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -224,18 +224,5 @@ object Form1: TForm1
       '')
     Left = 592
     Top = 88
-  end
-  object ADOTable4: TADOTable
-    Active = True
-    Connection = ADOConnection1
-    CursorType = ctStatic
-    TableName = 'hasta_kayit'
-    Left = 24
-    Top = 480
-  end
-  object DataSource4: TDataSource
-    DataSet = ADOTable4
-    Left = 80
-    Top = 480
   end
 end
