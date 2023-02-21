@@ -47,7 +47,7 @@ var
   Form1: TForm1;
 tarihsaat : string;
 implementation
-  uses unit4;
+  uses unit4, unit5;
 
 
 {$R *.dfm}
@@ -60,6 +60,13 @@ end;
 procedure TForm1.Button2Click(Sender: TObject);
 begin
   showmessage('Randevunuz Başarıyla Oluşturuldu!');
+  form5.adotable1.FieldByName('il').AsString := dbcombobox1.Text;
+  form5.adotable1.FieldByName('ilce').AsString := dbcombobox3.Text;
+  form5.adotable1.FieldByName('hastane').AsString := dbcombobox2.Text;
+  form5.adotable1.FieldByName('bolum').AsString := combobox1.Text;
+  form5.adotable1.FieldByName('tarih').AsString := edit1.Text;
+  form5.adotable1.FieldByName('saat').AsString := edit2.Text;
+  form5.ADOTable1.Post;
 end;
 
 procedure TForm1.DBComboBox1Change(Sender: TObject);

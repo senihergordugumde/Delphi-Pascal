@@ -38,10 +38,10 @@ if (edit1.GetTextLen > 0) and (edit2.GetTextLen > 0) and (edit3.GetTextLen > 0) 
   begin
    form1.Show;
     adotable1.Insert;
-    adotable1.FieldByName('Ad').AsString := edit1.Text;
-    adotable1.FieldByName('Soyad').AsString := edit2.Text;
-    adotable1.FieldByName('Kimlik').AsString := edit3.Text;
-    adotable1.Post;
+    adotable1.FieldByName('ad').AsString := edit1.Text;
+    adotable1.FieldByName('soyad').AsString := edit2.Text;
+    adotable1.FieldByName('kimlik').AsString := edit3.Text;
+
    form5.Close;
 
   end
