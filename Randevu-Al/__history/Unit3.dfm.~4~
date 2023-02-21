@@ -1,0 +1,58 @@
+object Form3: TForm3
+  Left = 694
+  Top = 415
+  Caption = 'Form3'
+  ClientHeight = 241
+  ClientWidth = 347
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poDesigned
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 48
+    Top = 35
+    Width = 58
+    Height = 15
+    Alignment = taCenter
+    BiDiMode = bdRightToLeftReadingOnly
+    Caption = 'Doktor  No'
+    ParentBiDiMode = False
+  end
+  object Label2: TLabel
+    Left = 48
+    Top = 93
+    Width = 23
+    Height = 15
+    Alignment = taCenter
+    Caption = #350'ifre'
+  end
+  object Edit1: TEdit
+    Left = 48
+    Top = 56
+    Width = 265
+    Height = 23
+    Alignment = taCenter
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 48
+    Top = 114
+    Width = 265
+    Height = 23
+    Alignment = taCenter
+    PasswordChar = #1
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 104
+    Top = 169
+    Width = 137
+    Height = 41
+    Caption = 'Button1'
+    TabOrder = 2
+  end
+end

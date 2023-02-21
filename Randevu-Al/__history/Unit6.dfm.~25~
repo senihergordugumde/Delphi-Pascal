@@ -1,0 +1,91 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Form6'
+  ClientHeight = 558
+  ClientWidth = 988
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  WindowState = wsMaximized
+  TextHeight = 15
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 80
+    Width = 982
+    Height = 120
+    DataSource = Form5.DataSource1
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Kimlik'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Ad'
+        Width = 55
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Soyad'
+        Width = 55
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'il'
+        Width = 55
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'ilce'
+        Width = 55
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'hastane'
+        Width = 300
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'bolum'
+        Width = 70
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tarih'
+        Width = 55
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'saat'
+        Width = 55
+        Visible = True
+      end>
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 296
+    Top = 248
+    Width = 360
+    Height = 25
+    DataSource = Form5.DataSource1
+    TabOrder = 1
+  end
+end
