@@ -63,4 +63,17 @@ object Form5: TForm5
     TabOrder = 3
     OnClick = Button1Click
   end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    TableName = 'hasta_kayit'
+    Left = 232
+    Top = 288
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 80
+    Top = 288
+  end
 end

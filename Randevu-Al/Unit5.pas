@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Data.DB, Data.Win.ADODB;
 
 type
   TForm5 = class(TForm)
@@ -15,6 +15,8 @@ type
     Edit3: TEdit;
     Label3: TLabel;
     Button1: TButton;
+    DataSource1: TDataSource;
+    ADOTable1: TADOTable;
     procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
@@ -35,7 +37,13 @@ begin
 if (edit1.GetTextLen > 0) and (edit2.GetTextLen > 0) and (edit3.GetTextLen > 0) then
   begin
    form1.Show;
+    adotable1.Insert;
+    adotable1.FieldByName('isim').AsString := edit1.Text;
+    adotable1.FieldByName('soyisim').AsString := edit2.Text;
+    adotable1.FieldByName('tc').AsString := edit3.Text;
+
    form5.Close;
+
   end
 
 else
