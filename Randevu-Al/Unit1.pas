@@ -55,10 +55,70 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 form4.show;
+form5.ADOTable1.First;
+repeat
+  form5.ADOTable1.Next;
+  if form5.ADOTable1.FieldByName('saat').AsString = '16:30' then
+    begin
+      form4.speedbutton12.Enabled := False;
+    end;
+
+  if form5.ADOTable1.FieldByName('saat').AsString = '14:30' then
+    begin
+      form4.speedbutton8.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '09:00' then
+  begin
+    form4.speedbutton1.Enabled := False;
+  end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '09:30' then
+    begin
+      form4.speedbutton2.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '10:00' then
+    begin
+      form4.speedbutton3.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '11:00' then
+    begin
+      form4.speedbutton4.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '11:30' then
+    begin
+      form4.speedbutton5.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '12:00' then
+    begin
+      form4.speedbutton6.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '14:00' then
+    begin
+      form4.speedbutton7.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '15:00' then
+    begin
+      form4.speedbutton9.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '15:30' then
+    begin
+      form4.speedbutton10.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '16:00' then
+    begin
+      form4.speedbutton11.Enabled := False;
+    end;
+  if form5.ADOTable1.FieldByName('saat').AsString = '16:30' then
+    begin
+      form4.speedbutton12.Enabled := False;
+    end;
+
+
+until (form5.adotable1.EOF) ;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
+  form5.ADOTable1.Insert;
   showmessage('Randevunuz Başarıyla Oluşturuldu!');
   form5.adotable1.FieldByName('il').AsString := dbcombobox1.Text;
   form5.adotable1.FieldByName('ilce').AsString := dbcombobox3.Text;
@@ -66,6 +126,7 @@ begin
   form5.adotable1.FieldByName('bolum').AsString := combobox1.Text;
   form5.adotable1.FieldByName('tarih').AsString := edit1.Text;
   form5.adotable1.FieldByName('saat').AsString := edit2.Text;
+
   form5.ADOTable1.Post;
 end;
 

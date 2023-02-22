@@ -41,7 +41,7 @@ var
   Form4: TForm4;
 
 implementation
-uses unit1;
+uses unit1, unit5;
  var
  x,y : string;
 
